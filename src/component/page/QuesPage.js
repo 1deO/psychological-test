@@ -7,12 +7,13 @@ import q1Down from '@/../public/0.start/q1-down.png';
 import circleImg from "@/../public/0.start/blur-circle-2.png";
 import { usePsyStore, useQuesStore } from '@/app/store/store';
 
-export default function QuesPage(quesIndex, nextStep) {
+export default function QuesPage({ quesIndex, nextStep }) {
 
   const quesData = useQuesStore( (state)=> state );
 
   const clickAnswer = function(){
     console.log("Click!!");
+    nextStep();
   }
   
   return (
