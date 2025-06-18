@@ -6,7 +6,7 @@ import titleImg from '@/../public/0.start/title.svg';
 import startBtn from '@/../public/0.start/start-btn.png';
 import circleImg from "@/../public/0.start/blur-circle-1.png";
 
-export default function StartPage() {
+export default function StartPage({ nextStep }) {
   
   return (
     <>
@@ -23,9 +23,8 @@ export default function StartPage() {
             缺的是——像你一樣軟爛卻獨特的存在。
             現在，就來看看你是什麼等級的失控可頌吧。
           </div>
-          <Image onClick={nextStep} className='w-[140px]' src={startBtn} alt='startBtn' />
+          <Image onClick={nextStep} className='w-[140px] cursor-pointer' src={startBtn} alt='startBtn' />
           <Image className='absolute bottom-0 translate-y-1/2' src={circleImg} alt='circleImg' />
-
         </div>
       </MobileFrame>
     </>

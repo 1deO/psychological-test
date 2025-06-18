@@ -24,30 +24,19 @@ export default function Croissant() {
        
       }else{
         //答完題到下階段
-        setPsyState({
-          ...psyState,
-          state: psyState.state + 1
-        });
+        psyState.updateState(psyState.state + 1);
       }
 
     }else{
       console.log("next");
-      psyState.state = psyState.state + 1;
-      setPsyState({
-        ...psyState,
-        state: psyState.state + 1
-      });
+      psyState.updateState(psyState.state + 1);
     }
   }
 
   const prevStep = function(){
     if(psyState.state <= 0) return;
     console.log("prev");
-    psyState.state = psyState.state - 1;
-    setPsyState({
-      ...psyState,
-      state: psyState.state - 1
-    })
+    psyState.updateState(psyState.state - 1);
   }
 
   return (
