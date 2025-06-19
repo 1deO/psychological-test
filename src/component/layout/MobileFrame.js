@@ -5,8 +5,8 @@ import bgHouse from "@/../public/0.start/bg-house.png";
 
 export default function MobileFramePage({ children }) {
   return (
-    <div className="min-w-[340px] w-[24%] min-h-[90%] max-h-[94%] p-[32px] 
-      rounded-2xl flex justify-center items-center mx-2 relative overflow-hidden">
+    <div className="relative min-w-[340px] w-[24%] h-[90dvh] p-[30px] 
+    rounded-2xl flex justify-center items-center mx-2 overflow-hidden">
 
       {/* 背景圖片放在最底層 */}
       <Image
@@ -17,8 +17,10 @@ export default function MobileFramePage({ children }) {
         priority
       />
 
-      {/* 內容層 */}
-      {children}
+      {/* 內容層：可滑動 */}
+      <div className="w-full h-full overflow-y-auto overflow-x-hidden px-2">
+        {children}
+      </div>
     </div>
   );
 }

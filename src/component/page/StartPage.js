@@ -1,23 +1,12 @@
 'use client';
 
 import MobileFrame from '@/component/layout/MobileFrame';
-import Image from 'next/image';
-import bgHouse from '@/../public/0.start/bg-house.png';
 
 export default function StartPage({ nextStep }) {
   return (
     <MobileFrame>
-      {/* 背景圖層 */}
-      <Image
-        src={bgHouse}
-        alt="背景圖"
-        fill
-        className="object-cover absolute z-[-1]"
-        priority
-      />
-
       {/* 內容層 */}
-      <div className="relative flex flex-col justify-center items-center text-center gap-8 px-6 py-12">
+      <div className="w-full h-full flex flex-col justify-center items-center text-center gap-8 px-6 py-12 m-1 select-none">
         {/* 標題 */}
         <div className="text-3xl font-semibold text-[#C1F1E6] animate-pulse leading-snug drop-shadow">
           快速測出你的<br />命定科系
@@ -31,7 +20,6 @@ export default function StartPage({ nextStep }) {
           他留下的測驗，能解讀靈魂深處的天賦與歸宿。<br />
           世人求之千載，悟者寥寥。<br />
           如今，機緣降臨於你。<br />
-          {/* 準備好迎接你的命定科系了嗎？ */}
         </p>
 
         {/* 開始按鈕 */}

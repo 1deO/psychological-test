@@ -1,6 +1,5 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Cinzel_Decorative } from 'next/font/google'
+import { Cinzel_Decorative } from 'next/font/google';
 
 const cinzel = Cinzel_Decorative({
   variable: '--font-cinzel',

@@ -9,10 +9,7 @@ export default function DisplayResultPage({ nextStep }) {
     <MobileFrame>
       <div className='relative flex flex-col justify-center items-center select-none gap-[32px] px-[32px] pt-[80px] pb-[120px] text-center'>
 
-        {/* 裝飾光圈 */}
-        <Image className='absolute top-0 -translate-y-1/2 pointer-events-none z-[-1]' src={circleImg} alt='circle-top' />
-        <Image className='absolute bottom-0 translate-y-1/2 pointer-events-none z-[-1]' src={circleImg} alt='circle-bottom' />
-
+       
         {/* 主提示文字 + pulse 動畫 */}
         <div className='text-3xl font-bold text-fuchsia-200 leading-snug drop-shadow-sm animate-pulse'>
           你的靈魂輪廓已浮現。
