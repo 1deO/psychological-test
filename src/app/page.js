@@ -6,6 +6,8 @@ import DisplayResultPage from '@/component/page/DisplayResultPage';
 import ResultPage from '@/component/page/ResultPage';
 import { useState } from 'react';
 import { usePsyStore } from '@/app/store/store'
+import splashImg from "@/../public/0.start/splash.jpg";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -41,14 +43,22 @@ export default function Home() {
 
   return (
     <>
-      <div className="w-screen h-screen bg-gray-200 flex justify-center items-center">
-        { psyState.state == 0 && <StartPage nextStep={nextStep} />}
-        { psyState.state == 1 && <QuestionPage nextStep={nextStep} questionIndex={psyState.questionState} />}
-        { psyState.state == 2 && <DisplayResultPage nextStep={nextStep}/>}
-        { psyState.state == 3 && <ResultPage/>}
-        
-        {/* <div onClick={prevStep}>上一步</div>
-        <div onClick={nextStep}>下一步</div> */}
+      <div className="w-screen h-screen bg-gray-200 flex justify-center items-center relative overflow-hidden">
+        {/* 背景圖層 */}
+        <Image
+          src={splashImg}
+          alt="splash"
+          fill
+          className="object-cover z-0"
+        />
+
+        {/* 內容層（z-10 讓內容在圖上方） */}
+        <div className="w-full h-full flex justify-center items-center z-10">
+          { psyState.state == 0 && <StartPage nextStep={nextStep} />}
+          { psyState.state == 1 && <QuestionPage nextStep={nextStep} questionIndex={psyState.questionState} />}
+          { psyState.state == 2 && <DisplayResultPage nextStep={nextStep}/>}
+          { psyState.state == 3 && <ResultPage/>}
+        </div>
       </div>
     </>
   );
