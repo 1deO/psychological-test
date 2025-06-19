@@ -18,7 +18,7 @@ export default function ResultPage() {
   return (
     <MobileFrame>
       {/* 可滑動容器 */}
-      <div className="w-full h-full overflow-y-auto px-4 py-2 flex flex-col items-center gap-4 select-none">
+      <div className="w-full h-full overflow-y-auto px-4 py-2 flex flex-col items-center gap-4 select-none scrollbar-none">
       {/* 根據分數顯示對應結果圖 */}
         {psyState.score < 6 && (
           <Image

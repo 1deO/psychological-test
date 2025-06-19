@@ -6,7 +6,7 @@ export default function StartPage({ nextStep }) {
   return (
     <MobileFrame>
       {/* 內容層 */}
-      <div className="w-full h-full flex flex-col justify-center items-center text-center gap-8 px-6 py-12 m-1 select-none">
+      <div className="w-full h-full flex flex-col justify-center items-center text-center gap-8 px-6 py-12 select-none scrollbar-none">
         {/* 標題 */}
         <div className="text-3xl font-semibold text-[#C1F1E6] animate-pulse leading-snug drop-shadow">
           快速測出你的<br />命定科系
