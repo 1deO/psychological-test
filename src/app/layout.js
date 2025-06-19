@@ -1,11 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Jacques_Francois } from 'next/font/google'
+import { Cinzel_Decorative } from 'next/font/google'
 
-const jacques = Jacques_Francois({
-  variable: '--font-jacques',
+const cinzel = Cinzel_Decorative({
+  variable: '--font-cinzel',
   subsets: ['latin'],
-  weight: '400',
+  weight: ['400', '700'],
 })
 
 export const metadata = {
@@ -15,10 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${jacques.variable} ${jacques.variable} antialiased`}
-      >
+    <html lang="en" className={`${cinzel.variable}`}>
+      <body className="font-[var(--font-cinzel)]">
         {children}
       </body>
     </html>

@@ -27,7 +27,7 @@ const useQuestionStore = create((set) => ({
       ]
     },
     "2":{
-      title: "你半夜睡不著時通常都在做什麼？",
+      title: "半夜睡不著時通常都在做什麼？",
       options: [
         {title: "想昨天那句話是不是講得太重了", value: 3},
         {title: "回想自己不堪的黑歷史", value: 4},

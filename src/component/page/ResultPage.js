@@ -21,7 +21,7 @@ export default function ResultPage() {
   return (
     <>
       <MobileFrame>
-        <div>
+        <div className="m-0">
           
           {
             psyState.score < 6 &&
@@ -44,11 +44,12 @@ export default function ResultPage() {
           }
 
           <div 
-            className={` bg-[#89BCFF] w-full rounded-full text-white 
-              py-[16px] text-sm flex justify-center items-center font-medium 
-              shadow-[0px_4px_0px_1px_#1098EC] cursor-pointer hover:translate-y-0.5 transition`}
+            className={` bg-[#293B42] text-[#E1FFF6] flex 
+            px-6 py-3 mt-3 rounded-full justify-center items-center 
+            text-lg font-medium transition-all duration-300 
+            hover:bg-[#2C8E7D] hover:shadow-[0_0_16px_#A7E7D4]`}
             onClick={playAgain}
-          > 再玩一次 </div>
+          > Play Again </div>
         </div>
       </MobileFrame>
     </>

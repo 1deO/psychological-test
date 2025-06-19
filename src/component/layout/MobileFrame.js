@@ -5,7 +5,7 @@ import bgHouse from "@/../public/0.start/bg-house.png";
 
 export default function MobileFramePage({ children }) {
   return (
-    <div className="min-w-[340px] w-[24%] min-h-[90%] p-[52px] 
+    <div className="min-w-[340px] w-[24%] min-h-[90%] max-h-[94%] p-[32px] 
       rounded-2xl flex justify-center items-center mx-2 relative overflow-hidden">
 
       {/* 背景圖片放在最底層 */}

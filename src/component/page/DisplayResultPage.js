@@ -7,7 +7,7 @@ import circleImg from '@/../public/0.start/blur-circle-1.png';
 export default function DisplayResultPage({ nextStep }) {
   return (
     <MobileFrame>
-      <div className='relative flex flex-col justify-center items-center gap-[32px] px-[32px] pt-[80px] pb-[120px] text-center'>
+      <div className='relative flex flex-col justify-center items-center select-none gap-[32px] px-[32px] pt-[80px] pb-[120px] text-center'>
 
         {/* 裝飾光圈 */}
         <Image className='absolute top-0 -translate-y-1/2 pointer-events-none z-[-1]' src={circleImg} alt='circle-top' />
@@ -20,14 +20,15 @@ export default function DisplayResultPage({ nextStep }) {
         </div>
 
         {/* 查看結果按鈕 */}
-        <div
-          className={`bg-[#89BCFF] w-full rounded-full text-white 
-            py-[16px] text-sm flex justify-center items-center font-medium 
-            shadow-[0px_4px_0px_1px_#1098EC] cursor-pointer hover:translate-y-0.5 transition`}
-          onClick={nextStep}
-        >
-          我的命定科系是…
-        </div>
+      
+        <div 
+          className={` bg-[#293B42] text-[#E1FFF6] flex 
+          px-8 py-4 mt-4 rounded-full justify-center items-center 
+          text-md font-medium transition-all duration-300 
+          hover:bg-[#2C8E7D] hover:shadow-[0_0_16px_#A7E7D4]`}
+        onClick={nextStep}
+        > 我的命定科系是…… </div>
+        
       </div>
     </MobileFrame>
   );

@@ -2,46 +2,47 @@
 
 import MobileFrame from '@/component/layout/MobileFrame';
 import Image from 'next/image';
-import startBtn from '@/../public/0.start/start-btn.png';
-import circleImg from "@/../public/0.start/blur-circle-1.png";
-import houseImg from "@/../public/0.start/house.jpg";
-
+import bgHouse from '@/../public/0.start/bg-house.png';
 
 export default function StartPage({ nextStep }) {
   return (
     <MobileFrame>
-      <div className='relative flex justify-center items-center flex-col gap-[24px] px-[32px] text-center'>
-        {/* 上方模糊圈圈裝飾 */}
-        <Image className='absolute top-0 -translate-y-1/2 pointer-events-none z-[-1]' src={circleImg} alt='circleImg' />
+      {/* 背景圖層 */}
+      <Image
+        src={bgHouse}
+        alt="背景圖"
+        fill
+        className="object-cover absolute z-[-1]"
+        priority
+      />
 
-        {/* 標題字串取代圖片 */}
-        <div className='text-4xl font-extrabold text-emerald-200 drop-shadow-sm'>
-          快速測出你的命定科系
+      {/* 內容層 */}
+      <div className="relative flex flex-col justify-center items-center text-center gap-8 px-6 py-12">
+        {/* 標題 */}
+        <div className="text-3xl font-semibold text-[#C1F1E6] animate-pulse leading-snug drop-shadow">
+          快速測出你的<br />命定科系
         </div>
 
-        {/* 補充副標題說明 */}
-        <div className='text-emerald-200 font-[500] text-[14px] leading-6 tracking-norma'>
-          有個神祕ㄉ大師說過，
-          每個人都有命定的「它」。
-          不是你選擇它，而是「它」選中了你。
-          大師圓寂前留下了一組題目，
-          後人前仆後繼地投入研究，但至今仍無人能參透其中奧義。
-          目前我們只知道，
-          這組題目能看穿作答者的命運及獨特的個人特質，找出最適合的科系
-          現在，按下開始，
-          踏上尋找命定科系的旅程吧！
-        </div>
+        {/* 說明文字 */}
+        <p className="text-[#EAE7DF] text-sm leading-relaxed drop-shadow max-w-[300px]">
+          相傳某位大師圓寂前曾言：<br />
+          「人人皆有先天之學，如種子遇土，自然生發。」<br />
+          這不是選擇，而是命運的召喚。<br />
+          他留下的測驗，能解讀靈魂深處的天賦與歸宿。<br />
+          世人求之千載，悟者寥寥。<br />
+          如今，機緣降臨於你。<br />
+          {/* 準備好迎接你的命定科系了嗎？ */}
+        </p>
 
         {/* 開始按鈕 */}
-        <Image
+        <button
           onClick={nextStep}
-          className='w-[140px] cursor-pointer hover:scale-105 transition'
-          src={startBtn}
-          alt='startBtn'
-        />
-
-        {/* 底部模糊圈圈裝飾 */}
-        <Image className='absolute bottom-0 translate-y-1/2 pointer-events-none z-[-1]' src={circleImg} alt='circleImg' />
+          className="bg-[#293B42] text-[#E1FFF6] flex items-center px-6 py-2 mt-2
+            rounded-full text-lg font-medium transition-all duration-300 
+            hover:bg-[#2C8E7D] hover:shadow-[0_0_16px_#A7E7D4]"
+        >
+          START
+        </button>
       </div>
     </MobileFrame>
   );

@@ -20,42 +20,37 @@ export default function QuestionPage({ questionIndex, nextStep }) {
     console.log(option.title, option.value);
   };
 
-  // 顏色統一設定
   const questionColors = [
     {
-      text: 'text-[#90B62A]',
-      bg: 'bg-[#BEE351]',
-      shadow: 'shadow-[0px_4px_0px_1px_#90B62A]',
-      border: 'border-[#90B62A]',
+      text: 'text-[#A7E7D4]', // 薄荷青綠（清透的預言感）
+      bg: 'bg-[#3C5B57]',     // 深青灰（冷靜又靈性）
+      shadow: 'shadow-[0_4px_0_1px_#2C8E7D]', // 深青藍陰影
+      border: 'border-[#5DE2C5]', // 淺綠邊框
     },
     {
-      text: 'text-[#DD3E3E]',
-      bg: 'bg-[#DD3E3E]',
-      shadow: 'shadow-[0px_4px_0px_1px_#8D4509]',
-      border: 'border-[#DD3E3E]',
+      text: 'text-[#EED6FF]', // 亮紫粉（通靈水晶感）
+      bg: 'bg-[#5A3B66]',     // 靜謐紫（神秘占卜桌）
+      shadow: 'shadow-[0_4px_0_1px_#A174B5]', // 紫灰陰影
+      border: 'border-[#B890F7]', // 淺紫邊框
     },
     {
-      text: 'text-[#1098EC]',
-      bg: 'bg-[#89BCFF]',
-      shadow: 'shadow-[0px_4px_0px_1px_#1098EC]',
-      border: 'border-[#1098EC]',
+      text: 'text-[#EAE7DF]', // 柔米白（預言手札感）
+      bg: 'bg-[#2F3C4C]',     // 靛黑藍（深夜測驗）
+      shadow: 'shadow-[0_4px_0_1px_#4D94D3]', // 靛藍光
+      border: 'border-[#89BCFF]', // 淺藍邊框
     },
   ];
+  
 
   const color = questionColors[questionIndex] || questionColors[0];
 
   return (
     <>
       <MobileFrame>
-        <Image
-          className="absolute top-0 -translate-y-1/2 pointer-events-none z-[-1]"
-          src={circle2Img}
-          alt="circle2Img"
-        />
+       
 
-        <div className="flex flex-col items-center gap-[22px] w-full">
-          <Image src={q1Up} className="w-[88px]" alt="q1Up" />
-
+        <div className="flex flex-col items-center gap-[22px] w-full select-none">
+         
           <div
             className={`border-2 rounded-full w-[48px] h-[48px] flex justify-center items-center font-bold text-xl ${color.text} ${color.border}`}
           >
@@ -63,7 +58,7 @@ export default function QuestionPage({ questionIndex, nextStep }) {
           </div>
 
           <div
-            className={`text-center font-bold text-3xl ${color.text} mb-[16px]`}
+            className={`text-center font-bold text-3xl ${color.text} mb-[16px] select-none`}
           >
             {currentQuestion.title}
           </div>
@@ -80,18 +75,8 @@ export default function QuestionPage({ questionIndex, nextStep }) {
             ))}
           </div>
 
-          <Image
-            src={q1Down}
-            className="w-[88px] pointer-events-none"
-            alt="q1Down"
-          />
         </div>
 
-        <Image
-          className="absolute bottom-0 translate-y-1/2 pointer-events-none z-[-1]"
-          src={circle2Img}
-          alt="circle2Img"
-        />
       </MobileFrame>
     </>
   );
